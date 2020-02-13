@@ -27,10 +27,10 @@ class App < Sinatra::Base
   end
 
   get '/:operation/:number1/:number2' do
-  number1 = param[:number1].to_i
-  number2 = param[:number2].to_i
+  number1 = params[:number1].to_i
+  number2 = params[:number2].to_i
 
-  answer = "something went wrong"
+  answer = " "
 
   case params[:operation]
   when "add"
