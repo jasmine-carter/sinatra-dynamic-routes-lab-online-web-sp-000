@@ -26,7 +26,7 @@ class App < Sinatra::Base
     "#{answer << "."}"
   end
 
-  get "/:operation/:number1/:number2"
+  get "/:operation/:number1/:number2" do
     if param[:operation] == "add"
       "#{param[:number1].to_i + param[:number2].to_i}"
     elsif param[:operation] == "subtract"
